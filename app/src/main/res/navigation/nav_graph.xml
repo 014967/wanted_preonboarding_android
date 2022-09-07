@@ -9,16 +9,37 @@
         android:id="@+id/navigation_top_news"
         android:name="com.example.wantedpreonboarding.presentation.topnews.TopNewsFragment"
         android:label="@string/navigation_top_news"
-        tools:layout="@layout/fragment_top_news" />
+        tools:layout="@layout/fragment_top_news" >
+        <action
+            android:id="@+id/action_navigation_top_news_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_categories"
         android:name="com.example.wantedpreonboarding.presentation.categories.CategoriesFragment"
         android:label="@string/navigation_categories"
-        tools:layout="@layout/fragment_categories" />
+        tools:layout="@layout/fragment_categories" >
+        <action
+            android:id="@+id/action_navigation_categories_to_navigation_top_news"
+            app:destination="@id/navigation_top_news" />
+    </fragment>
     <fragment
         android:id="@+id/navigation_saved"
         android:name="com.example.wantedpreonboarding.presentation.saved.SavedFragment"
         android:label="@string/navigation_saved"
-        tools:layout="@layout/fragment_saved" />
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_navigation_saved_to_newsDetailFragment"
+            app:destination="@id/newsDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsDetailFragment"
+        android:name="com.example.wantedpreonboarding.presentation.detail.NewsDetailFragment"
+        android:label="fragment_news_detail"
+        tools:layout="@layout/fragment_news_detail" >
+        <argument
+            android:name="TopNews"
+            app:argType="com.example.wantedpreonboarding.presentation.model.TopNews" />
+    </fragment>
 
 </navigation>

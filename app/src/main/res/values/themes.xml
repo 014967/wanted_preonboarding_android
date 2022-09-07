@@ -14,4 +14,30 @@
         <!-- Customize your theme here. -->
         <item name="android:textColorPrimary">@color/white</item>
     </style>
+
+    <style name = "NewsTitle" parent="@android:style/TextAppearance.Medium">
+        <item name= "android:textColor">@color/black</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineHeight">18.15dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name = "NewsWriter" parent="@android:style/TextAppearance.Medium">
+        <item name= "android:textColor">@color/black</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name = "NewsWritedTime" parent="@android:style/TextAppearance.Medium">
+        <item name= "android:textColor">@color/gray</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name = "NewsContent" parent="@android:style/TextAppearance.Medium">
+        <item name= "android:textColor">@color/black</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:lineHeight">14.52dp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>

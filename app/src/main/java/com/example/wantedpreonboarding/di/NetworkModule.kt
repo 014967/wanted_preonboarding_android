@@ -20,7 +20,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 class NetworkModule {
 
-    val BASE_URL = "https://newsapi.org"
+    val baseUrl = "https://newsapi.org"
 
     @Provides
     @Singleton
@@ -54,7 +54,7 @@ class NetworkModule {
     @Singleton
     fun provideRetrofit(client: OkHttpClient, gsonConverterFactory: GsonConverterFactory): Retrofit {
         return Retrofit.Builder()
-            .baseUrl(BASE_URL)
+            .baseUrl(baseUrl)
             .client(client)
             .addConverterFactory(gsonConverterFactory)
             .build()

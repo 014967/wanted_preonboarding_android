@@ -7,4 +7,14 @@
     <string name="navigation_saved">Saved</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <!-- contentDescription -->
+    <string name="image_top_news">Image Top News</string>
+
+    <!-- dummyHint -->
+    <string name="dummy_top_news_title">10 of the Cheapest and Healthiest Ways
+to Feed a Group, According to Reddit BlarBlarBlarBlarBlarBlarBlarBlarBlar</string>
+    <string name="dummy_writer">Pedro Berrrill</string>
+    <string name="dummy_writed_time">3 hours ago</string>
 </resources>

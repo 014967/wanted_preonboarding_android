@@ -1,7 +1,19 @@
+buildscript {
+    repositories {
+        google()
+    }
+    dependencies {
+        def nav_version = "2.5.1"
+        classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
+    }
+}
+
 plugins {
     alias libs.plugins.android.application apply false
     alias libs.plugins.android.library apply false
     alias libs.plugins.kotlin.android apply false
     alias libs.plugins.kotlin.kapt apply false
     alias libs.plugins.hilt.plugin apply false
+    alias libs.plugins.kotlin.parcelize apply false
 }
+

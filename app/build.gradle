@@ -3,6 +3,8 @@ plugins {
     alias libs.plugins.kotlin.android
     alias libs.plugins.kotlin.kapt
     alias libs.plugins.hilt.plugin
+    alias libs.plugins.kotlin.parcelize
+    id 'androidx.navigation.safeargs'
 }
 
 android {
@@ -48,6 +50,10 @@ dependencies {
     implementation(libs.retrofit)
     implementation(libs.gson.converter)
     implementation(libs.okHttpLog)
+
+    implementation(libs.bundles.glide)
+
+    implementation(libs.timber)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.bundles.test)

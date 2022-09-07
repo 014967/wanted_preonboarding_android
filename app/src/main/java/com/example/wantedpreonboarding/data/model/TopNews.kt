@@ -1,4 +1,4 @@
-package com.example.wantedpreonboarding.data.source.remote.model
+package com.example.wantedpreonboarding.data.model
 
 import com.google.gson.annotations.SerializedName
 
