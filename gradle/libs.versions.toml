@@ -13,6 +13,9 @@ hilt-compiler = "1.0.0"
 navigation = "2.5.1"
 okHttp = "4.10.0"
 retrofit = "2.9.0"
+glide="4.13.2"
+timber ="5.0.1"
+kotlin-parcelize = "1.7.20-Beta"
 
 
 [libraries]
@@ -36,11 +39,16 @@ gson-converter = { group = "com.squareup.retrofit2", name = "converter-gson", ve
 
 okHttpLog = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "okHttp" }
 
+glide = { group ="com.github.bumptech.glide", name = "glide", version.ref="glide"}
+glide-compiler = { group ="com.github.bumptech.glide", name = "compiler", version.ref="glide"}
+
+timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
 
 [bundles]
 androidx = ["androidx-core-ktx", "androidx-appcompat", "androidx-constraintlayout","androidx-navigation-fragment", "androidx-navigation-ui"]
 test = ["androidx-test-ext-junit", "androidx-test-espresso-core"]
 hilt-compiler = ["hilt-android-compiler", "hilt-compiler"]
+glide = ["glide" , "glide-compiler"]
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "gradleplugin" }
@@ -49,3 +57,4 @@ kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kotlin" }
 hilt-plugin = { id = "com.google.dagger.hilt.android", version.ref = "hilt" }
 hilt-gradlePlugin = { id = "com.google.dagger:hilt-android-gradle-plugin", version.ref = "hilt" }
+kotlin-parcelize = { id = "org.jetbrains.kotlin.plugin.parcelize", version.ref = "kotlin-parcelize"}
