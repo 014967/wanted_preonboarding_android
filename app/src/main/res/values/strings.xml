@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">WantedPreOnBoarding</string>
+    <string name="app_name">NewsApp</string>
+
+    <!-- bottom navigation title -->
+    <string name="navigation_top_news">Top News</string>
+    <string name="navigation_categories">Categories</string>
+    <string name="navigation_saved">Saved</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
