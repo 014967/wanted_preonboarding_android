@@ -1,4 +1,4 @@
-package com.example.wantedpreonboarding.presentation.topnews
+package com.example.wantedpreonboarding.presentation.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
