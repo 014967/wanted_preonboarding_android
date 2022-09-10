@@ -16,6 +16,7 @@ retrofit = "2.9.0"
 glide="4.13.2"
 timber ="5.0.1"
 kotlin-parcelize = "1.7.20-Beta"
+room = "2.4.3"
 
 
 [libraries]
@@ -43,6 +44,12 @@ glide = { group ="com.github.bumptech.glide", name = "glide", version.ref="glide
 glide-compiler = { group ="com.github.bumptech.glide", name = "compiler", version.ref="glide"}
 
 timber = { group = "com.jakewharton.timber", name = "timber", version.ref = "timber" }
+
+room-runtime = { group = "androidx.room",name = "room-runtime", version.ref = "room"}
+room-compiler = { group= "androidx.room", name = "room-compiler", version.ref = "room"}
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref ="room"}
+
+kotlin-stdlib = {group = "org.jetbrains.kotlin", name = "kotlin-stdlib", version.ref = "kotlin"}
 
 [bundles]
 androidx = ["androidx-core-ktx", "androidx-appcompat", "androidx-constraintlayout","androidx-navigation-fragment", "androidx-navigation-ui"]

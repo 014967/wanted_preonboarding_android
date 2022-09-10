@@ -8,13 +8,25 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
+    <string name="navigation_news_detail">{label}</string>
 
     <!-- contentDescription -->
     <string name="image_top_news">Image Top News</string>
+    <string name="news_writed_time">%1$s hours ago</string>
 
     <!-- dummyHint -->
     <string name="dummy_top_news_title">10 of the Cheapest and Healthiest Ways
 to Feed a Group, According to Reddit BlarBlarBlarBlarBlarBlarBlarBlarBlar</string>
     <string name="dummy_writer">Pedro Berrrill</string>
     <string name="dummy_writed_time">3 hours ago</string>
+
+    <!-- category -->
+    <string name= "category_main_title">Choose a category to\nstart reading</string>
+    <string name= "category_business">Business</string>
+    <string name= "category_entertainment">Entertainment</string>
+    <string name= "category_general">General</string>
+    <string name= "category_health">Health</string>
+    <string name= "category_science">Science</string>
+    <string name= "category_sports">Sports</string>
+    <string name= "category_technology">Technology</string>
 </resources>

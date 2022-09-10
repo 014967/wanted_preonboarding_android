@@ -12,5 +12,6 @@ data class TopNews(
     val writer: String,
     val writedTime: String,
     val title: String,
-    val content: String
+    val content: String,
+    val description: String
 ) : Parcelable

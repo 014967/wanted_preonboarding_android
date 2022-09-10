@@ -1,30 +1,16 @@
 package com.example.wantedpreonboarding.data.model
 
-import com.google.gson.annotations.SerializedName
+import com.example.wantedpreonboarding.data.source.local.entity.ArticleEntity
+import com.example.wantedpreonboarding.domain.model.TopNews
 
-data class Article(
-
-    @SerializedName("author")
-    val author: String?,
-
-    @SerializedName("content")
-    val content: String,
-
-    @SerializedName("description")
-    val description: String,
-
-    @SerializedName("publishedAt")
-    val publishedAt: String,
-
-    @SerializedName("source")
-    val source: Source,
-
-    @SerializedName("title")
-    val title: String,
-
-    @SerializedName("url")
-    val url: String,
-
-    @SerializedName("urlToImage")
-    val urlToImage: String
+/**
+ * @Created by 김현국 2022/09/09
+ */
+fun TopNews.asEntity() = ArticleEntity(
+    title = title,
+    author = author,
+    content = content,
+    description = description,
+    publishedAt = publishedAt,
+    urlToImage = imageUrl
 )

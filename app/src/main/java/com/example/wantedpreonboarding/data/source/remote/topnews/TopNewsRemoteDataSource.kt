@@ -1,6 +1,6 @@
 package com.example.wantedpreonboarding.data.source.remote.topnews
 
-import com.example.wantedpreonboarding.data.model.TopNews
+import com.example.wantedpreonboarding.data.source.remote.model.RemoteTopNews
 import retrofit2.Response
 import javax.inject.Inject
 
@@ -10,7 +10,7 @@ import javax.inject.Inject
 class TopNewsRemoteDataSource @Inject constructor(
     private val topNewsApi: TopNewsApi
 ) {
-    suspend fun getTopNews(country: String): Response<TopNews> {
+    suspend fun getTopNews(country: String): Response<RemoteTopNews> {
         return topNewsApi.getTopNews(
             country = country
         )

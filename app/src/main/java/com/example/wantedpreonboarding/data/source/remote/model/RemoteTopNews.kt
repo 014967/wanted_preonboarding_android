@@ -1,11 +1,11 @@
-package com.example.wantedpreonboarding.data.model
+package com.example.wantedpreonboarding.data.source.remote.model
 
 import com.google.gson.annotations.SerializedName
 
-data class TopNews(
+data class RemoteTopNews(
 
     @SerializedName("articles")
-    val articles: List<Article>,
+    val articles: List<RemoteArticle>,
 
     @SerializedName("status")
     val status: String,

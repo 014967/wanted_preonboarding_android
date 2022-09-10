@@ -8,5 +8,6 @@ data class TopNews(
     val author: String,
     val imageUrl: String,
     val publishedAt: String,
-    val content: String
+    val content: String,
+    val description: String
 )

@@ -4,7 +4,7 @@ plugins {
     alias libs.plugins.kotlin.kapt
     alias libs.plugins.hilt.plugin
     alias libs.plugins.kotlin.parcelize
-    id 'androidx.navigation.safeargs'
+    id 'androidx.navigation.safeargs.kotlin'
 }
 
 android {
@@ -54,6 +54,12 @@ dependencies {
     implementation(libs.bundles.glide)
 
     implementation(libs.timber)
+
+    implementation(libs.room.runtime)
+    kapt(libs.room.compiler)
+    implementation(libs.room.ktx)
+
+    implementation(libs.kotlin.stdlib)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.bundles.test)
