@@ -3,10 +3,9 @@
 
     <!-- bottom navigation title -->
     <string name="navigation_top_news">Top News</string>
+    <string name="navigation_categories_label">Category - {category}</string>
     <string name="navigation_categories">Categories</string>
     <string name="navigation_saved">Saved</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="navigation_news_detail">{label}</string>
 
@@ -21,12 +20,14 @@ to Feed a Group, According to Reddit BlarBlarBlarBlarBlarBlarBlarBlarBlar</strin
     <string name="dummy_writed_time">3 hours ago</string>
 
     <!-- category -->
-    <string name= "category_main_title">Choose a category to\nstart reading</string>
-    <string name= "category_business">Business</string>
-    <string name= "category_entertainment">Entertainment</string>
-    <string name= "category_general">General</string>
-    <string name= "category_health">Health</string>
-    <string name= "category_science">Science</string>
-    <string name= "category_sports">Sports</string>
-    <string name= "category_technology">Technology</string>
+    <string name="category_main_title">Choose a category to\nstart reading</string>
+    <string name="category_business">Business</string>
+    <string name="category_entertainment">Entertainment</string>
+    <string name="category_general">General</string>
+    <string name="category_health">Health</string>
+    <string name="category_science">Science</string>
+    <string name="category_sports">Sports</string>
+    <string name="category_technology">Technology</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
