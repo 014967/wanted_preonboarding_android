@@ -1,4 +1,4 @@
-package com.example.wantedpreonboarding.presentation.detail
+package com.example.wantedpreonboarding.presentation.viewmodel
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
