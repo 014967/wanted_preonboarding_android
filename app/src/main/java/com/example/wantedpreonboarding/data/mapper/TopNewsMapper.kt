@@ -4,7 +4,7 @@ import com.example.wantedpreonboarding.domain.model.TopNews
 import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.math.abs
-import com.example.wantedpreonboarding.data.model.TopNews as TopNewsResponse
+import com.example.wantedpreonboarding.data.source.remote.model.RemoteTopNews as TopNewsResponse
 
 /**
  * @Created by 김현국 2022/09/07
@@ -15,9 +15,10 @@ fun mappingTopNewsResponseToDomainModel(topNews: TopNewsResponse): List<TopNews>
         TopNews(
             title = article.title,
             author = article.author ?: "",
-            imageUrl = article.urlToImage,
+            imageUrl = article.urlToImage ?: "",
             publishedAt = parseResponsePublishTime(article.publishedAt),
-            content = article.content
+            content = article.content ?: "",
+            description = article.description ?: ""
         )
     }
 }
