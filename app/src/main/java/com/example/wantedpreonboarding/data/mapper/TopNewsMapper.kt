@@ -24,9 +24,10 @@ fun mappingTopNewsResponseToDomainModel(topNews: TopNewsResponse): List<TopNews>
 }
 
 fun parseResponsePublishTime(publishedAt: String): String {
-    val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'", Locale.ENGLISH)
+    val formatter = SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'")
+    formatter.timeZone = TimeZone.getTimeZone("UTC")
     val date = formatter.parse(publishedAt)?.time
-    val currentDateTime = Calendar.getInstance().time
+    val currentDateTime = Calendar.getInstance(TimeZone.getTimeZone("UTC")).time
 
     val diff: Long = date?.minus(currentDateTime.time) ?: 0
     val seconds = diff / 1000
