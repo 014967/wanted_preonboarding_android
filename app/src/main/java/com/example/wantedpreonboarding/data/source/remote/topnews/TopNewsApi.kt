@@ -11,6 +11,7 @@ import retrofit2.http.Query
 interface TopNewsApi {
     @GET("/v2/top-headlines")
     suspend fun getTopNews(
-        @Query("country") country: String
+        @Query("country") country: String,
+        @Query("category") category: String
     ): Response<RemoteTopNews>
 }

@@ -15,9 +15,9 @@ import javax.inject.Inject
 class TopNewsRepositoryImpl @Inject constructor(
     private val topNewsRemoteDataSource: TopNewsRemoteDataSource
 ) : TopNewsRepository {
-    override fun getTopNews(): Flow<Results<List<TopNews>>> {
+    override fun getTopNews(category: String): Flow<Results<List<TopNews>>> {
         return flow {
-            val response = topNewsRemoteDataSource.getTopNews(country = "us")
+            val response = topNewsRemoteDataSource.getTopNews(country = "us", category = category)
             val body = response.body()
             if (response.isSuccessful && body != null) {
                 if (body.status == "ok") {

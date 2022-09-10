@@ -11,7 +11,7 @@ import com.example.wantedpreonboarding.data.source.local.entity.ArticleFtsEntity
 
 @Database(
     entities = [ArticleEntity::class, ArticleFtsEntity::class],
-    version = 1,
+    version = 2,
     exportSchema = false
 )
 abstract class AppDatabaseImpl : RoomDatabase(), AppDatabase {
