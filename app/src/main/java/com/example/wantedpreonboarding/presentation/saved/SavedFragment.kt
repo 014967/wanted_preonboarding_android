@@ -1,23 +1,59 @@
 package com.example.wantedpreonboarding.presentation.saved
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import com.example.wantedpreonboarding.R
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.lifecycleScope
+import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.wantedpreonboarding.base.BaseFragment
+import com.example.wantedpreonboarding.databinding.FragmentSavedBinding
+import com.example.wantedpreonboarding.presentation.adapter.TopNewsAdapter
+import com.example.wantedpreonboarding.presentation.model.TopNews
+import com.example.wantedpreonboarding.presentation.viewmodel.SavedNewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.launch
 
+@AndroidEntryPoint
+class SavedFragment :
+    BaseFragment<FragmentSavedBinding>(FragmentSavedBinding::inflate),
+    (TopNews) -> Unit {
 
-class SavedFragment : Fragment() {
+    private val savedViewModel: SavedNewsViewModel by viewModels()
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_saved, container, false)
+    private val topNewsAdapter: TopNewsAdapter by lazy {
+        TopNewsAdapter(this)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        observeSavedTopNews()
+        initUI()
+    }
 
+    private fun initUI() = with(binding) {
+        rvTopNews.adapter = topNewsAdapter
+        rvTopNews.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+        savedViewModel.getSavedTopNewsList()
+    }
+
+    private fun observeSavedTopNews() = with(viewLifecycleOwner.lifecycleScope) {
+        launch {
+            repeatOnLifecycle(state = Lifecycle.State.RESUMED) {
+                savedViewModel.savedTopNewsList.collect { state ->
+                    topNewsAdapter.submitList(state)
+                }
+            }
+        }
+    }
+
+    override fun invoke(topNews: TopNews) {
+        val action = SavedFragmentDirections.actionNavigationSavedToNewsDetailFragment(
+            topNews,
+            topNews.title
+        )
+        findNavController().navigate(action)
+    }
 }
