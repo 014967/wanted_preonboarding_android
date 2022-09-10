@@ -18,43 +18,43 @@ class CategoriesFragment : BaseFragment<FragmentCategoriesBinding>(FragmentCateg
 
     private fun initClickListener() = with(binding) {
         ivBusiness.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_business)
             )
             findNavController().navigate(action)
         }
         ivEntertainment.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_entertainment)
             )
             findNavController().navigate(action)
         }
         ivGeneral.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_general)
             )
             findNavController().navigate(action)
         }
         ivHealth.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_health)
             )
             findNavController().navigate(action)
         }
         ivScience.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_science)
             )
             findNavController().navigate(action)
         }
         ivSports.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_sports)
             )
             findNavController().navigate(action)
         }
         ivTechnology.setOnClickListener {
-            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationTopNews(
+            val action = CategoriesFragmentDirections.actionNavigationCategoriesToNavigationCategoriesTopNews(
                 getString(R.string.category_technology)
             )
             findNavController().navigate(action)
