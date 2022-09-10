@@ -10,7 +10,9 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.wantedpreonboarding.base.BaseFragment
 import com.example.wantedpreonboarding.databinding.FragmentTopNewsBinding
+import com.example.wantedpreonboarding.presentation.adapter.TopNewsAdapter
 import com.example.wantedpreonboarding.presentation.model.TopNews
+import com.example.wantedpreonboarding.presentation.viewmodel.TopNewsViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -34,7 +36,7 @@ class TopNewsFragment :
     private fun initUI() = with(binding) {
         rvTopNews.adapter = topNewsAdapter
         rvTopNews.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
-        topNewsViewModel.getTopNews()
+        topNewsViewModel.getTopNews(category = "")
     }
     private fun observeTopNews() = with(viewLifecycleOwner.lifecycleScope) {
         launch {
@@ -54,7 +56,8 @@ class TopNewsFragment :
 
     override fun invoke(topNews: TopNews) {
         val action = TopNewsFragmentDirections.actionNavigationTopNewsToNewsDetailFragment(
-            topNews
+            topNews,
+            topNews.title
         )
         findNavController().navigate(action)
     }

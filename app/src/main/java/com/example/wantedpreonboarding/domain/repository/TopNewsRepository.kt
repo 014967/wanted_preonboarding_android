@@ -9,5 +9,5 @@ import kotlinx.coroutines.flow.Flow
  */
 interface TopNewsRepository {
 
-    fun getTopNews(): Flow<Results<List<TopNews>>>
+    fun getTopNews(category: String): Flow<Results<List<TopNews>>>
 }

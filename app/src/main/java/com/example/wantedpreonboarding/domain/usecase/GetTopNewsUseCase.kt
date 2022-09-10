@@ -12,7 +12,7 @@ import javax.inject.Inject
 class GetTopNewsUseCase @Inject constructor(
     private val topNewsRepository: TopNewsRepository
 ) {
-    operator fun invoke(): Flow<Results<List<TopNews>>> {
-        return topNewsRepository.getTopNews()
+    operator fun invoke(category: String): Flow<Results<List<TopNews>>> {
+        return topNewsRepository.getTopNews(category = category)
     }
 }
