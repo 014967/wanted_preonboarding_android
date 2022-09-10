@@ -13,6 +13,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.example.wantedpreonboarding.R
 import com.example.wantedpreonboarding.base.BaseFragment
 import com.example.wantedpreonboarding.databinding.FragmentNewsDetailBinding
+import com.example.wantedpreonboarding.presentation.viewmodel.NewsDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
