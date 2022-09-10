@@ -30,5 +30,19 @@ fun mappingTopNewsPresentationModelToDomainModel(
         publishedAt = topNews.writedTime,
         imageUrl = topNews.imageUrl,
         content = topNews.content,
-        description = topNews.description)
+        description = topNews.description
+    )
+}
+
+fun mappingTopNewsModelDomainToPresentationModel(
+    topNews: TopNewsDomainModel
+): TopNews {
+    return TopNews(
+        title = topNews.title,
+        writer = topNews.author,
+        writedTime = topNews.publishedAt,
+        imageUrl = topNews.imageUrl,
+        content = topNews.content,
+        description = topNews.description
+    )
 }
