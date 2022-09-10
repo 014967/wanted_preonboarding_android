@@ -39,10 +39,4 @@ class NewsDetailRepositoryImpl @Inject constructor(
             emit(delete)
         }
     }
-
-    override fun getSavedNews(): Flow<TopNews> {
-        return flow {
-            val articleList = articleLocalDataSource.getAllSavedArticles()
-        }
-    }
 }
