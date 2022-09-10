@@ -14,3 +14,12 @@ fun TopNews.asEntity() = ArticleEntity(
     publishedAt = publishedAt,
     urlToImage = imageUrl
 )
+
+fun ArticleEntity.asModel() = TopNews(
+    title = title,
+    author = author ?: "",
+    content = content ?: "",
+    description = description ?: "",
+    publishedAt = publishedAt,
+    imageUrl = urlToImage ?: ""
+)
