@@ -3,65 +3,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/navigation_top_news">
+    app:startDestination="@+id/top_news">
 
-    <fragment
-        android:id="@+id/navigation_top_news"
-        android:name="com.example.wantedpreonboarding.presentation.topnews.TopNewsFragment"
-        android:label="@string/navigation_top_news"
-        tools:layout="@layout/fragment_top_news">
-        <action
-            android:id="@+id/action_navigation_top_news_to_newsDetailFragment"
-            app:destination="@id/navigation_news_detail" />
-    </fragment>
+    <include app:graph = "@navigation/top_news"/>
+    <include app:graph = "@navigation/categories"/>
+    <include app:graph = "@navigation/saved"/>
 
-    <fragment
-        android:id="@+id/navigation_categories"
-        android:name="com.example.wantedpreonboarding.presentation.categories.CategoriesFragment"
-        android:label="@string/navigation_categories"
-        tools:layout="@layout/fragment_categories">
-
-        <action
-            android:id="@+id/action_navigation_categories_to_navigation_categories_top_news"
-            app:destination="@id/navigation_categories_top_news" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_saved"
-        android:name="com.example.wantedpreonboarding.presentation.saved.SavedFragment"
-        android:label="@string/navigation_saved"
-        tools:layout="@layout/fragment_saved">
-        <action
-            android:id="@+id/action_navigation_saved_to_newsDetailFragment"
-            app:destination="@id/navigation_news_detail" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_news_detail"
-        android:name="com.example.wantedpreonboarding.presentation.detail.NewsDetailFragment"
-        android:label="@string/navigation_news_detail"
-        tools:layout="@layout/fragment_news_detail">
-        <argument
-            android:name="topNews"
-            app:argType="com.example.wantedpreonboarding.presentation.model.TopNews" />
-        <argument
-            android:name="label"
-            app:argType="string" />
-    </fragment>
-
-    <fragment
-        android:id="@+id/navigation_categories_top_news"
-        android:name="com.example.wantedpreonboarding.presentation.categories.categoriesnews.CategoriesNewsFragment"
-        android:label="@string/navigation_categories_label"
-        tools:layout="@layout/fragment_categories_news">
-
-        <argument
-            android:name="category"
-            app:argType="string"
-            />
-        <action
-            android:id="@+id/action_navigation_categories_top_news_to_navigation_news_detail"
-            app:destination="@id/navigation_news_detail" />
-    </fragment>
 
 </navigation>

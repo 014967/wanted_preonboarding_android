@@ -1,11 +1,9 @@
 package com.example.wantedpreonboarding.di
 
 import com.example.wantedpreonboarding.domain.repository.NewsDetailRepository
+import com.example.wantedpreonboarding.domain.repository.SavedNewsRepository
 import com.example.wantedpreonboarding.domain.repository.TopNewsRepository
-import com.example.wantedpreonboarding.domain.usecase.DeleteSavedNewsUseCase
-import com.example.wantedpreonboarding.domain.usecase.FindSavedNewsWithTitleUseCase
-import com.example.wantedpreonboarding.domain.usecase.GetTopNewsUseCase
-import com.example.wantedpreonboarding.domain.usecase.InsertNewsUseCase
+import com.example.wantedpreonboarding.domain.usecase.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -41,5 +39,11 @@ class UseCaseModule {
     @Singleton
     fun provideDeleteSavedNewsUseCase(newsDetailRepository: NewsDetailRepository): DeleteSavedNewsUseCase {
         return DeleteSavedNewsUseCase(newsDetailRepository = newsDetailRepository)
+    }
+
+    @Provides
+    @Singleton
+    fun provideGetSavedTopNewsListUseCase(savedNewsRepository: SavedNewsRepository): GetSavedTopNewsListUseCase {
+        return GetSavedTopNewsListUseCase(savedNewsRepository = savedNewsRepository)
     }
 }

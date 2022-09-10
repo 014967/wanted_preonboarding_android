@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/saved"
+    app:startDestination="@id/navigation_saved">
+
+
+    <fragment
+        android:id="@+id/navigation_saved"
+        android:name="com.example.wantedpreonboarding.presentation.saved.SavedFragment"
+        android:label="@string/navigation_saved"
+        tools:layout="@layout/fragment_saved">
+        <action
+            android:id="@+id/action_navigation_saved_to_newsDetailFragment"
+            app:destination="@id/navigation_news_detail"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_news_detail"
+        android:name="com.example.wantedpreonboarding.presentation.detail.NewsDetailFragment"
+        android:label="@string/navigation_news_detail"
+        tools:layout="@layout/fragment_news_detail">
+        <argument
+            android:name="topNews"
+            app:argType="com.example.wantedpreonboarding.presentation.model.TopNews" />
+        <argument
+            android:name="label"
+            app:argType="string" />
+    </fragment>
+
+</navigation>

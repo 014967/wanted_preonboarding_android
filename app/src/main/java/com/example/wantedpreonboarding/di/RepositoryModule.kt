@@ -1,8 +1,10 @@
 package com.example.wantedpreonboarding.di
 
 import com.example.wantedpreonboarding.data.repository.NewsDetailRepositoryImpl
+import com.example.wantedpreonboarding.data.repository.SavedNewsRepositoryImpl
 import com.example.wantedpreonboarding.data.repository.TopNewsRepositoryImpl
 import com.example.wantedpreonboarding.domain.repository.NewsDetailRepository
+import com.example.wantedpreonboarding.domain.repository.SavedNewsRepository
 import com.example.wantedpreonboarding.domain.repository.TopNewsRepository
 import dagger.Binds
 import dagger.Module
@@ -25,4 +27,8 @@ abstract class RepositoryModule {
     @Singleton
     @Binds
     abstract fun provideNewsDetailRepository(impl: NewsDetailRepositoryImpl): NewsDetailRepository
+
+    @Singleton
+    @Binds
+    abstract fun provideSavedNewsRepository(impl: SavedNewsRepositoryImpl): SavedNewsRepository
 }
