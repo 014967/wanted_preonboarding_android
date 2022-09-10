@@ -10,9 +10,10 @@ import javax.inject.Inject
 class TopNewsRemoteDataSource @Inject constructor(
     private val topNewsApi: TopNewsApi
 ) {
-    suspend fun getTopNews(country: String): Response<RemoteTopNews> {
+    suspend fun getTopNews(country: String, category: String): Response<RemoteTopNews> {
         return topNewsApi.getTopNews(
-            country = country
+            country = country,
+            category = category
         )
     }
 }
