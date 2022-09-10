@@ -13,6 +13,4 @@ interface NewsDetailRepository {
     fun findSavedNews(title: String): Flow<Boolean>
 
     fun deleteNews(title: String): Flow<Int>
-
-    fun getSavedNews(): Flow<TopNews>
 }
