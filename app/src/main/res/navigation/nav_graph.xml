@@ -9,5 +9,4 @@
     <include app:graph = "@navigation/categories"/>
     <include app:graph = "@navigation/saved"/>
 
-
 </navigation>
