@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.CenterCrop
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.example.wantedpreonboarding.R
 import com.example.wantedpreonboarding.databinding.ItemTopNewsBinding
 import com.example.wantedpreonboarding.presentation.model.TopNews
 
@@ -51,10 +52,10 @@ class TopNewsAdapter(
 
         fun bind(topNews: TopNews) = with(binding) {
             Glide.with(ivTopNews).load(topNews.imageUrl)
-                .transform(CenterCrop(), RoundedCorners(10)).into(ivTopNews)
+                .transform(CenterCrop(), RoundedCorners(10)).placeholder(R.drawable.img_placeholder).into(ivTopNews)
             tvTopNewsTitle.text = topNews.title
             tvTopNewsWriter.text = topNews.writer
-            tvTopNewsWritedTime.text = "${topNews.writedTime} hours ago"
+            tvTopNewsWritedTime.text = tvTopNewsWritedTime.context.getString(R.string.news_writed_time, topNews.writedTime)
         }
     }
 }
