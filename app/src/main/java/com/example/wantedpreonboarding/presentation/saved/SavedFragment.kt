@@ -43,7 +43,14 @@ class SavedFragment :
         launch {
             repeatOnLifecycle(state = Lifecycle.State.RESUMED) {
                 savedViewModel.savedTopNewsList.collect { state ->
-                    topNewsAdapter.submitList(state)
+                    when (state) {
+                        is SavedUiStates.Success -> {
+                            topNewsAdapter.submitList(state.news)
+                        }
+                        is SavedUiStates.Loading -> {
+                            topNewsAdapter.submitList(emptyList())
+                        }
+                    }
                 }
             }
         }

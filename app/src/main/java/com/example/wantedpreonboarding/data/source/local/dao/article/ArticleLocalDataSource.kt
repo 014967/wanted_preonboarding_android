@@ -15,7 +15,7 @@ class ArticleLocalDataSource @Inject constructor(
         )
     }
 
-    suspend fun findArticleWithTitle(articleTitle: String): ArticleEntity {
+    suspend fun findArticleWithTitle(articleTitle: String): ArticleEntity? {
         return articleDao.searchSavedArticle(query = articleTitle)
     }
 
