@@ -1,6 +1,7 @@
 # Wanted_PreOnBoarding_Anroid
 
 ## 팀이름 
+학연지연우연인연 
 
 # Structure
 
